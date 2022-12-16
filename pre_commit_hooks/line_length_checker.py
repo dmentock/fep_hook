@@ -21,15 +21,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     args = parser.parse_args(argv)
 
     retv = 0
-
     for filename in args.filenames:
         with open(filename, 'rb+') as f:
-
             ret_for_file = verify_line_length(f)
-
             if ret_for_file:
-                print(f"Illegal line length(s) for {filename}:")
                 retv = 1
+                print(f"Illegal line length(s) for {filename}:")
                 for line in ret_for_file:
                     print(f'    Line at {line["line_nr"]} too long: {len(line["content"])} > {MAX_LINE_LENGTH}')
     return retv
