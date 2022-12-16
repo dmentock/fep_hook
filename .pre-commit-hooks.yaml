@@ -1,0 +1,6 @@
+-   id: line-length-checker
+    name: line_length_checker
+    description: verify legal line lengths
+    entry: line-length-checker
+    language: python
+    files: .*\.f90$
