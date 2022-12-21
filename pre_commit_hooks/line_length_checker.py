@@ -11,7 +11,7 @@ def verify_line_length(buffer: IO[bytes] ,limit: int = None) -> Iterable[str]:
     culprits = []
     for i, line in enumerate(list(buffer)):
         line = line.decode().strip()
-        if len(line.split('!')[0]) > limit_: culprits.append({"line_nr":i, "content":line})
+        if len(line.split('!')[0]) > limit_: culprits.append({"line_nr":i+1, "content":line})
     return culprits
 
 
