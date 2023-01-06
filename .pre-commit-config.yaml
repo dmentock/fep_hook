@@ -2,4 +2,5 @@ repos:
 -   repo: https://github.com/dmentock/fep_hook
     rev: v0.1
     hooks:
-    -   id: line-length-checker
+    -   id: check-line-length
+    -   id: detect-deprecated-symbols
