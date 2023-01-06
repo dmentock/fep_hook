@@ -1,7 +1,7 @@
 -   id: check-line-length
     name: check line length
     description: verify line length doesn't cross threshold
-    entry: line-length-checker
+    entry: check-line-length
     language: python
     files: .*\.f90$
 
